@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Past Games!
+{% endblock %}
+
+{% block main %}
+    <form action="/past_games" method="get">
+        <main class="container py-5 text-center">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-start">Team</th>
+                        <th class="text-end">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for row in rows: %}
+
+                        <tr>
+                            <td class="text-start">{{row.team}}</td>
+                            <td class="text-end">{{row.Date}}</td>
+                        </tr>
+
+                        {% endfor %}
+
+
+
+                </tbody>
+            </table>
+
+                </main>
+
+{% endblock %}

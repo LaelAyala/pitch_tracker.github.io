@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search Pitchers
+{% endblock %}
+
+{% block main %}
+    <form action="/search_pitchers" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="pitcher_team" name="team" placeholder="Team" type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="pitcher_date" name="date" placeholder="Enter Date in form of YYYY-MM-DD" type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="pitcher_first" name="pitcher_first" placeholder="Pitcher First Name" type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="pitcher_last" name="pitcher_last" placeholder="Pitcher Last Name" type="text">
+        </div>
+         <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+{% endblock %}

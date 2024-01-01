@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   New Pitcher!
+{% endblock %}
+
+{% block main %}
+    <form action="/new_pitcher" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="first_name" name="first_name" placeholder="Pitcher First Name" type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="last_name" name="last_name" placeholder="Pitcher Last Name" type="text">
+        </div>
+         <button class="btn btn-primary" type="submit">Enter!</button>
+    </form>
+{% endblock %}
